@@ -1,0 +1,288 @@
+/*mobile*/
+
+.studioAlbums{
+
+	&_list{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 3em;
+	margin-bottom: 7em;
+
+		&-images{
+		width: 20em;
+		}
+
+		/*para que la última imagen quede igual ubicada al resto*/
+		&-covers{
+			width: 20em;
+		}
+
+
+		/*titulo de album*/
+		&-title{
+			@include font-titles;
+			color: white;
+			padding: 1em;
+			width: 100%;
+			background-color: $color-lgrey-90;
+			font-size: 18px;
+			line-height:  24px;
+			margin-top: 0;
+		}
+
+		a {
+			display: block;
+			-webkit-transition: transform 0.5s ease;
+			}
+
+		a:hover{
+			
+			text-decoration: none;
+			-webkit-transform: scale(1.15);
+			-webkit-transform-origin: center ;
+
+		}
+	}
+}
+
+/*dektop*/
+
+.studioAlbums-Desk{
+
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+
+}
+
+	.studioAlbums-Desk-ul{
+		margin-top: 3em;
+		display: flex;
+		padding: 0;
+		justify-content: center;
+		list-style: none;
+
+
+	}
+
+
+
+
+.studioAlbums-Desk_list{
+		margin: 1em;
+		
+
+
+.studioAlbums-Desk_list-images{
+		width: 20em;
+		}
+
+		/*para que la última imagen quede igual ubicada al resto*/
+.studioAlbums-Desk_list-covers{
+			width: 20em;
+		}
+
+
+		/*titulo de album*/
+		&-title{
+			@include font-titles;
+			color: white;
+			padding: 1em;
+			width: 100%;
+			background-color: $color-lgrey-90;
+			font-size: 18px;
+			line-height:  24px;
+			margin-top: 0;
+		}
+
+		a {
+			display: block;
+			-webkit-transition: transform 0.5s ease;
+			}
+
+		a:hover{
+			
+			text-decoration: none;
+			-webkit-transform: scale(1.15);
+			-webkit-transform-origin: center ;
+
+		}
+	
+}
+
+/*media queries discografia*/
+
+@include desktop {
+	.studioAlbums {
+		display:none;
+	}
+
+ 	.studioAlbums-Desk {
+		display:block;
+	}
+}
+
+@include tablet {
+	.studioAlbums {
+		display:block;
+	}
+ 	.studioAlbums-Desk {
+		display:none;
+	}
+
+}
+
+@include mobile {
+	.studioAlbums {
+		display:block;
+	}
+ 	.studioAlbums-Desk {
+		display:none;
+	}
+}
+
+
+/*para pagina de cada album mobile*/
+.Albumbox{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	
+
+	&__Title{
+		position: relative;			
+		@include font-titles;
+		color: white;
+		padding: 1em;
+		width: 100%;
+		background-color: $color-lgrey-90;
+		font-size: 18px;
+		line-height:  24px;
+		margin: 0px;
+		margin-top:  7em;
+		text-align: center;
+		flex-direction: column;
+	}
+}
+
+.Albumbox-Mobile{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	  justify-content: center;
+  align-items: center;
+
+
+}
+
+.Albumbox-Mobile__img{
+		width: 20em;
+		margin-top: 1em;
+
+
+	}
+
+.Albumbox-Mobile__Text{
+
+		@include font-paragraph
+		background-color: $color-white-90;
+		margin-top: 1em;
+		padding: 1em 4em;
+	}
+
+
+.tableAlbum{
+
+	border: 1px solid transparent;
+	width: 70%;
+	margin-bottom: 6em;
+
+	th{
+		background-color: $color-lgrey-90;
+		@include font-listaDiscography;
+		font-weight: 500;
+		text-align: center; 
+	}
+
+	td{
+		background-color: $color-white-90;
+		@include font-paragraph;
+		font-weight: 500;
+		text-align: center;
+	}
+
+}
+
+
+/*para pagina de cada album desktop*/
+
+.Albumbox-Desk-Album{
+
+	align-items: center;
+	flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+
+
+}
+
+	.studioAlbums-Desk-Album-Album-ul{
+		margin-top: 3em;
+		display: flex;
+		padding: 0;
+		justify-content: center;
+		list-style: none;
+
+	}
+
+	.Albumbox-Desk-Album__img{
+		width: 32%;
+
+
+}
+
+.Albumbox-Desk-Album__Text{
+		padding: 2em;
+		margin-top: 5%;
+		width: 80%;
+		background-color: $color-white-90;
+		@include font-paragraph;
+		width: 42%;
+
+}
+
+/*media queries pagina albums*/
+
+@include desktop {
+	.Albumbox-Mobile {
+		display:none;
+	}
+
+ 	.Albumbox-Desk-Album {
+		display:flex;
+	}
+}
+
+@include tablet {
+	.Albumbox-Desk-Album {
+		display:flex;
+	}
+ 	.Albumbox-Mobile {
+		display:none;
+	}
+
+}
+
+@include mobile {
+	.Albumbox-Mobile {
+		display:flex;
+	}
+ 	.Albumbox-Desk-Album {
+		display:none;
+	}
+}
+

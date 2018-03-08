@@ -1,0 +1,198 @@
+/*mobile*/
+
+.header__blackBox{
+	background-color: $color-black;
+	height: 8em;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	top: 0;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+    
+
+    animation-name: blackcover;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    repeat: once;
+
+@keyframes blackcover { 
+    0%   {background-color:$color-black; height:100%; width:100%; }
+ 
+    25%  {background-color:$color-black;height:100%; width:100%;}
+
+	100%  {background-color:$color-black;}
+
+}
+
+    &-logo{
+  		padding: none;
+  		padding-left: 0.5em; 
+  		margin-bottom: 0.5em; 
+  		height: 2em;
+  		position: relative;
+  		animation-name: logoMove;
+  		animation-duration: 2s;
+    	animation-timing-function: ease;
+    	animation-fill-mode: forwards;
+    	repeat: once;
+
+  	}
+@-webkit-keyframes logoMove{
+    from {position: right; height: 5em;}
+    to {position:header__blackBox-logo}
+}
+
+	&-menu{
+		width: 2.2em;
+		margin: 1.5em;
+		position: relative;
+
+		&-transition{
+			-webkit-transform: rotate(45deg);
+		}
+
+	}
+
+
+}
+
+/*desktop*/
+
+
+.headerHome__Desktop{
+  background-color: $color-black;
+  height: 9em;
+  display: flex;
+  justify-content: space-between;
+
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+
+  animation-name: blackcover;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    repeat: once;
+
+@keyframes blackcover { 
+    0%   {background-color:$color-black; height:100%; width:100%; }
+ 
+    25%  {background-color:$color-black;height:100%; width:100%;}
+
+  100%  {background-color:$color-black;}
+
+}
+}
+
+.headerHome__Desktop-logo{
+  height: 2.5em;
+  padding-top: 0;
+}
+
+.NavDeskHome__ul li{
+  display: inline-block;
+  list-style: none;
+  padding-right: 3em;
+  @include font-lista;
+  padding-top: 3em;
+
+  a {
+      float:right;
+      color: $color-white;
+      -webkit-transition: transform 0.5s ease;
+      }
+
+    a:hover{
+      
+      text-decoration: none;
+      -webkit-transform: scale(1.15);
+      -webkit-transform-origin: center ;
+
+    }
+
+}
+
+.dropbtn {
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  margin: 0;
+    padding: 0;
+
+  margin-top: 2em;
+  margin-left: -2em;
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    width: 12em;
+    padding: none;
+    z-index: 1;
+
+
+    li{
+      @include font-listaDiscography;
+      padding-left: 2.5em;
+
+    }
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: none}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color:none;
+}
+
+
+
+@include desktop {
+  .header__blackBox {
+    display:none;
+  }
+  .headerHome__Desktop {
+    display:flex;
+  }
+}
+
+
+@include mobile {
+  .header__blackBox {
+    display:flex;
+  }
+  .headerHome__Desktop {
+    display:none;
+  }
+
+
+}
+

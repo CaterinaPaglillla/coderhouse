@@ -1,0 +1,9 @@
+.contactBox{
+	background-color: $color-lgrey-90;
+	padding: 3em;
+	@include font-paragraph;
+}
+
+.contact__text{
+	padding: 1em;
+}

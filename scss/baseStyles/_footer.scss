@@ -1,0 +1,44 @@
+.footer__whiteBox{
+	background-color: black;
+	height: 4em;
+	width: 100%;
+	position: fixed; 
+	padding: none;
+	margin: none;
+	bottom: 0;
+
+
+	&-list{
+	    display: flex;
+	    justify-content: center;
+	    padding: 0;
+	    padding-top: 0.5em;
+
+
+
+	    &-social{
+			list-style: none;
+
+		a {
+			display: block;
+			-webkit-transition: transform 0.5s ease;
+			}
+
+		a:hover{
+			
+			text-decoration: none;
+			-webkit-transform: scale(1.35);
+			-webkit-transform-origin: center ;
+
+		}
+
+	    
+
+			&-img{
+				height: 2.5em;
+				padding: 0.5em 2em;
+
+			}
+		}
+	}
+}

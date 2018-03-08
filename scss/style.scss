@@ -1,0 +1,54 @@
+@import 'baseStyles/_reset';
+
+
+/*	BASE DE ESTILOS: HEADER, FOOTER, BACKGROUND */
+
+@import 'baseStyles/_helpers';
+
+@import 'baseStyles/_base';
+
+@import 'baseStyles/_color';
+
+@import 'baseStyles/_typography';
+
+@import 'baseStyles/_boxes';
+
+@import 'baseStyles/_header';
+
+@import 'baseStyles/_footer';
+
+
+
+
+
+/* NAVEGACION */
+
+@import 'pages/_home';
+
+@import 'pages/_topFive';
+
+@import 'pages/_discography';
+
+@import 'pages/_contact';
+
+
+/* VARIABLES */
+
+@import 'variables/_buttons';
+
+@import 'variables/_menuDesplegable';
+
+@import 'variables/_animationHome';
+
+
+/*(vendor)
+	Boostrap archivos editables. 
+	Este archivo llama a todos lo sdisponibles en bootstrap.*/
+
+
+@import 'vendor/bootstrap/stylesheets/_bootstrap';
+
+@import 'baseStyles/_header';
+
+@import 'baseStyles/_footer';
+

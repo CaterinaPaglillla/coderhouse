@@ -1,0 +1,15 @@
+/*titulo de cada view (html)*/
+
+.view-boxTitle{
+	position: relative;			
+	@include font-titles;
+	color: white;
+	padding: 1em;
+	width: 100%;
+	background-color: #e3e3e4;
+	font-size: 18px;
+	line-height:  24px;
+	margin: 0px;
+	margin-top:  7em;
+	text-align: center;
+}

@@ -1,0 +1,49 @@
+
+
+.topFiveDiv{
+
+	overflow-x: scroll;
+	white-space:nowrap;
+
+	&__List{
+		margin:0;
+		padding: 0;
+		
+		&-Item{
+			margin-top: 13em;
+			display: inline-block;
+			padding: 0em 3em;
+
+			&-title{
+				@include font-lista
+				text-align: center;
+				background-color: $color-lgrey-90;
+				font-size: 15px;
+				margin-bottom: 0;
+			}
+
+			&-img{
+				width: 20em;
+			}
+		}
+
+	}
+
+}
+
+/*clase original esta en "baseStyles/_boxes.scss",
+hubo que modificarla para que no se moviera al hacer el y-scroll*/
+
+.view-boxTitle-TopFive{			
+	@include font-titles;
+	color: white;
+	padding: 1em;
+	width: 100%;
+	background-color: #e3e3e4;
+	font-size: 18px;
+	line-height:  24px;
+	margin: 0px;
+	margin-top:  7em;
+	text-align: center;
+	position: fixed;
+}
